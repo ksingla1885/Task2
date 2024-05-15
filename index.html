@@ -1,17 +1,13 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <!-- ===== Iconscout CSS ===== -->
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
-
-    <!-- ===== CSS ===== -->
     <link rel="stylesheet" href="style.css">
-         
+    
     <title>Login & Registration Form</title> 
 </head>
 <body>
@@ -21,28 +17,27 @@
             <div class="form login">
                 <span class="title">Login</span>
 
-                <form action="#">
+                <form id="loginForm" action="#" method="post">
                     <div class="input-field">
-                        <input type="text" placeholder="Enter your email" required>
+                        <input type="email" id="loginEmail" name="loginEmail" placeholder="Enter your email" required>
                         <i class="uil uil-envelope icon"></i>
                     </div>
                     <div class="input-field">
-                        <input type="password" class="password" placeholder="Enter your password" required>
+                        <input type="password" id="loginPassword" name="loginPassword" class="password" placeholder="Enter your password" required>
                         <i class="uil uil-lock icon"></i>
                         <i class="uil uil-eye-slash showHidePw"></i>
                     </div>
 
                     <div class="checkbox-text">
                         <div class="checkbox-content">
-                        
-                            <label for="logCheck" class="text">Remember me</label>
+                            <input type="checkbox" id="rememberMe" name="rememberMe">
+                            <label for="rememberMe" class="text">Remember me</label>
                         </div>
-                        
                         <a href="#" class="text">Forgot password?</a>
                     </div>
 
                     <div class="input-field button">
-                        <input type="button" value="Login">
+                        <button type="submit" id="loginBtn">Login</button>
                     </div>
                 </form>
 
@@ -57,45 +52,43 @@
             <div class="form signup">
                 <span class="title">Registration</span>
 
-                <form action=".php">
+                <form id="signupForm" action=".php" method="post">
                     <div class="input-field">
-                        <input type="text" placeholder="Enter your name" required>
+                        <input type="text" id="signupName" name="signupName" placeholder="Enter your name" required>
                         <i class="uil uil-user"></i>
                     </div>
                     <div class="input-field">
-                        <input type="mail" placeholder="Enter your email" required>
+                        <input type="email" id="signupEmail" name="signupEmail" placeholder="Enter your email" required>
                         <i class="uil uil-envelope icon"></i>
                     </div>
                     <div class="input-field">
-                        <input type="text" placeholder="Enter your number" required>
+                        <input type="tel" id="signupPhone" name="signupPhone" placeholder="Enter your number" required>
                         <i class="uil uil-user"></i>
                     </div>
                     <div class="input-field">
-                        <input type="password" class="password" placeholder="Create a password" required>
+                        <input type="password" id="signupPassword" name="signupPassword" class="password" placeholder="Create a password" required>
                         <i class="uil uil-lock icon"></i>
                     </div>
                     <div class="input-field">
-                        <input type="password" class="password" placeholder="Confirm a password" required>
-                    
+                        <input type="password" id="confirmPassword" name="confirmPassword" class="password" placeholder="Confirm your password" required>
+                        <span id="passwordMessage" class="message"></span>
                     </div>
 
                     <div class="checkbox-text">
                         <div class="checkbox-content">
-                            <input type="checkbox" id="termCon">
-                            <label for="termCon" class="text">I accepted all terms and conditions</label>
+                            <input type="checkbox" id="termCon" name="termCon" required>
+                            <label for="termCon" class="text">I accept all terms and conditions</label>
                         </div>
                     </div>
 
                     <div class="input-field button">
-                        <input type="button" value="Signup">
+                        <button type="submit" id="signupBtn">Signup</button>
                     </div>
                 </form>
-
-                
             </div>
         </div>
     </div>
 
-     <script src="script.js"></script> 
+<script src="script.js"></script> 
 </body>
 </html>
